@@ -49,8 +49,21 @@
 // div1.style.margin = 'margin';
 // div1.style.width = '500px';
 
-const titreB = document.querySelector('h1');
+//? changer titre sur le click:
+// const titreB = document.querySelector('h1');
 
-titreB.addEventListener('click', function(){
-    titreB.innerText = "🤩";
-});
+// titreB.addEventListener('click', function(){
+//     titreB.innerText = "🤩";
+// });
+
+//? focus et blur
+const texte = document.getElementById('barre');
+
+barre.addEventListener('focus', ()=>{
+    texte.style.backgroundColor = 'royalblue';
+    texte.style.color = 'white';
+})
+barre.addEventListener('blur', ()=>{
+    texte.style.backgroundColor = 'transparent';
+    texte.style.color = 'black';
+})
