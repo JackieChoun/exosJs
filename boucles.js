@@ -57,13 +57,36 @@
 // });
 
 //? focus et blur
-const texte = document.getElementById('barre');
+// const texte = document.getElementById('barre');
 
-barre.addEventListener('focus', ()=>{
-    texte.style.backgroundColor = 'royalblue';
-    texte.style.color = 'white';
-})
-barre.addEventListener('blur', ()=>{
-    texte.style.backgroundColor = 'transparent';
-    texte.style.color = 'black';
-})
+// barre.addEventListener('focus', ()=>{
+//     texte.style.backgroundColor = 'royalblue';
+//     texte.style.color = 'white';
+// })
+// barre.addEventListener('blur', ()=>{
+//     texte.style.backgroundColor = 'transparent';
+//     texte.style.color = 'black';
+// })
+
+//? Mini test pour capter event du Clavier
+// document.addEventListener('keyup', function(eventClavier){
+//     console.log('Yes Moi ECRIRE');
+//     console.log(eventClavier);
+//     console.log(eventClavier.key);
+// });
+
+//? exo pour transmettre dans div l'entrée dans une textarea:
+const area = document.getElementById('exempleText');
+const element = document.getElementById('utilisateur');
+
+area.addEventListener('keyup', function(eventClavier){
+    // element.innerText = (eventClavier.key);
+    // element.append(eventClavier.key);
+    element.innerText = area.value;
+});
+
+element.style.backgroundColor = 'black';
+element.style.width = '1000px';
+element.style.height = '500px';
+element.style.color = 'white';
+element.style.marginTop = '10px';
