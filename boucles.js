@@ -75,13 +75,16 @@
 //     console.log(eventClavier.key);
 // });
 
-//? exo pour transmettre dans div l'entrée dans une textarea:
+//? exo pour transmettre dans div l'entrée dans une textarea et Localstorage:
 const area = document.getElementById('exempleText');
 const element = document.getElementById('utilisateur');
+//textSave = localStorage.getItem("save"); inutile?
+element.innerText = area.value;
 
 area.addEventListener('keyup', function(eventClavier){
     // element.innerText = (eventClavier.key);
     // element.append(eventClavier.key);
+    localStorage.setItem("saveTextArea", area.value);
     element.innerText = area.value;
 });
 
@@ -90,3 +93,8 @@ element.style.width = '1000px';
 element.style.height = '500px';
 element.style.color = 'white';
 element.style.marginTop = '10px';
+
+
+
+
+
