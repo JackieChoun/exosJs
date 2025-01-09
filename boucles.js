@@ -94,6 +94,18 @@ element.style.height = '500px';
 element.style.color = 'white';
 element.style.marginTop = '10px';
 
+//? Vanta JS:
+VANTA.BIRDS({
+    el: "#vanta",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00
+})
+
 
 
 
