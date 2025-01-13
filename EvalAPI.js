@@ -15,14 +15,14 @@ const cardApi = async() => {
             let container = document.createElement('div');
             let nom = document.createElement('h3');
             let image = document.createElement('img');
-            let mail = document.createElement('li');
-            let adress = document.createElement('li');
-            let phone = document.createElement('li');
+            let mail = document.createElement('p');
+            let adress = document.createElement('p');
+            let phone = document.createElement('p');
             let boutton = document.createElement('button');
 
             card.append(container);
             image.src = transformedData.results[0].picture.large;
-            nom.innerText = transformedData.results[0].name.title + ' ' + transformedData.results[0].name.first + ' ' + transformedData.results[0].name.last;
+            nom.innerText = transformedData.results[0].name.title + '. ' + transformedData.results[0].name.first + ' ' + transformedData.results[0].name.last;
             mail.innerText = transformedData.results[0].email;
             adress.innerText = 'Adress:'+ transformedData.results[0].location.street.number + '-' + transformedData.results[0].location.street.name + ' ('+ transformedData.results[0].location.city + '-' + transformedData.results[0].location.country + ')';
             phone.innerText = 'Phone: ' + transformedData.results[0].phone;
@@ -30,12 +30,7 @@ const cardApi = async() => {
             
             
     
-            container.append(image);
-            container.append(nom);
-            container.append(mail);
-            container.append(adress);
-            container.append(phone);
-            container.append(boutton);
+            container.append(image, nom, mail, adress, phone, boutton);
 
             container.style.width = "100%";
             container.style.height = "auto";
@@ -46,6 +41,11 @@ const cardApi = async() => {
             container.style.borderRadius = "10px";
             image.style.borderRadius = "10px";
             boutton.style.backgroundColor = "blue";
+
+            boutton.addEventListener('click',()=>{
+                console.log('Random User Clicked');
+                cardApi();
+            })
     }
 
     catch (error) {
