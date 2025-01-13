@@ -92,7 +92,7 @@ const contactApiSecurePlus =  async () => {
         container.append(height);
         container.append(weight);
 
-        container.style.marginTop = "5px";
+        container.style.marginTop = "10px";
         container.style.width = "10%";
         container.style.height = "auto";
         image.style.width = "70%";
