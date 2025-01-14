@@ -1,34 +1,34 @@
 //? Premier exo:
-// class Imc {
-//     //* Constructor -> initialise les données
-//     constructor(nom, poids, taille) {
-//         this.name = nom;
-//         this.weight = poids;
-//         this.size = taille; 
-//         this.imc = this.calculImc();
-//     }
-//     //* Le calcul
-//     calculImc() {
-//         // TODO 
-//         return (this.weight / this.size ** 2).toFixed(2);
-//     }
-//     //* Affichage
-//     display() {
-//         // TODO
-//         console.log(`Bonjour, ${this.name} a un IMC de ${this.imc}`);
-//     }
-// }
-// //* progr principal -> on fait l'injection des données
-// let list = [
-//     new Imc("Sébastien Chabal", 135, 1.7),
-//     new Imc("Escaladeuse", 45, 1.68),
-//     new Imc("JOJO", 300, 2),
-//     new Imc("Gontrand", 90, 1.75),
-//     new Imc("Colonel Clock", 200, 1.75),
-//     new Imc("JOsiane de la Vega", 99, 1.55)
-// ];
-// //list.???((uneInstanceImc) => uneInstanceImc.display());
-// list.forEach((uneInstanceImc) => uneInstanceImc.display());
+class Imc {
+    //* Constructor -> initialise les données
+    constructor(nom, poids, taille) {
+        this.name = nom;
+        this.weight = poids;
+        this.size = taille; 
+        this.imc = this.calculImc();
+    }
+    //* Le calcul
+    calculImc() {
+        // TODO 
+        return (this.weight / this.size ** 2).toFixed(2);
+    }
+    //* Affichage
+    display() {
+        // TODO
+        console.log(`Bonjour, ${this.name} a un IMC de ${this.imc}`);
+    }
+}
+//* progr principal -> on fait l'injection des données
+let list = [
+    new Imc("Sébastien Chabal", 135, 1.7),
+    new Imc("Escaladeuse", 45, 1.68),
+    new Imc("JOJO", 300, 2),
+    new Imc("Gontrand", 90, 1.75),
+    new Imc("Colonel Clock", 200, 1.75),
+    new Imc("JOsiane de la Vega", 99, 1.55)
+];
+//list.???((uneInstanceImc) => uneInstanceImc.display());
+list.forEach((uneInstanceImc) => uneInstanceImc.display());
 
 //? deuxieme exo:
 class Employee {

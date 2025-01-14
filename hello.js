@@ -1,5 +1,3 @@
-
-
 export const titreChuck = async() => {
     const titre = document.getElementById('text-center');
     try{
